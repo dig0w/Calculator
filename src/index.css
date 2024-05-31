@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+
+  background-color: black;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+button {
+  outline: none;
+}
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1rem auto 0;
+
+  width: 50%;
+}
+.header button {
+  margin: auto;
+
+  width: 48px;
+  height: 48px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: #838383;
+  font-size: 24px;
+}
+.header .active {
+  color: #C86836;
+}
+
+.operation {
+  width: 100vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.operation .main {
+  color: #CBCBCB;
+  font-size: 38px;
+
+  margin: 0 12% 0 0;
+}
+.operation .sub {
+  color: #4C4C4C;
+  font-size: 28px;
+
+  margin: 0 12% 0 0;
+}
+
+.spacer {
+  margin: 1rem auto;
+
+  height: 1px;
+  width: 75%;
+
+  background-color: #373737;
+}
+
+.btns {
+  width: 100vw;
+  height: 49vh;
+
+  margin: 0 0 1rem 0;
+}
+.grid4x5 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  transition: all .1s ease-in;
+}
+.grid5x7 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  transition: all .1s ease-in;
+}
+.btns button {
+  margin: auto;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  color: #CBCBCB;
+}
+.btns.grid4x5 button {
+  font-size: 38px;
+
+  transition: all .1s ease-in;
+}
+.btns.grid5x7 button {
+  font-size: 24px;
+
+  transition: all .1s ease-in;
+}
+.btns .dark.disabled {
+  color: #4B4B4B;
+}
+.btns .orange {
+  color: #C86836;
+}
+.btns .dark {
+  color: #838383;
+}
+.btns .circle {
+  display: flex;
+  align-items: center;
+
+  aspect-ratio: 1/1;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  transition: all .1s ease-in;
+}
+.btns .circle.hidden {
+  display: none;
+}
+.btns.grid4x5 .circle {
+  width: 70px;
+}
+.btns.grid4x5 .circle:hover {
+  background-color: #282828;
+
+  transition: all .1s ease-in;
+}
+.btns.grid5x7 .circle {
+  width: 50px;
+}
+.btns.grid5x7 .circle:hover {
+  background-color: #282828;
+
+  transition: all .1s ease-in;
+}
+
+.btns .orange-circle {
+  display: flex;
+  align-items: center;
+
+  aspect-ratio: 1/1;
+
+  margin: auto;
+
+  border-radius: 50%;
+  background-color: #C86836;
+
+  transition: all .1s ease-in;
+}
+.btns.grid4x5 .orange-circle {
+  width: 70px;
+}
+.btns.grid4x5 .orange-circle:hover {
+  width: 60px;
+
+  transition: all .1s ease-in;
+}
+.btns.grid5x7 .orange-circle {
+  width: 50px;
+}
+.btns.grid5x7 .orange-circle:hover {
+  width: 40px;
+
+  transition: all .1s ease-in;
+}

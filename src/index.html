@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="./render.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/3212ffe19d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header">
+      <button class="active"><i class="fa-solid fa-calculator"></i></button>
+      <button><i class="fa-solid fa-border-all"></i></button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="operation">
+      <p id="expression" class="main">0</p>
+      <p id="result" class="sub">= 0</p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="btns grid4x5" id="btns">
+      <div class="hidden circle">
+        <button class="dark" onclick="toggle2nd()">2nd</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="degRad()">deg</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="degRad()">rad</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.sin(')">sin</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.asin(')">sin⁻¹</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.cos(')">cos</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.acos(')">cos⁻¹</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.tan(')">tan</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.atan(')">tan⁻¹</button>
+      </div>
+      
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator('**2')">x²</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.log10(')">log</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.log(')">ln</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('(')">(</button>
+      </div>
+      <div class="hidden circle">
+        <button class="dark" onclick="addNumber(')')">)</button>
+      </div>
+
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.sqrt(')">√x</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="clearAll()">AC</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="clearLast()">C</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="addOperator('/100')">%</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="addOperator('/')">÷</button>
+      </div>
+
+      <div class="hidden circle">
+        <button class="dark" onclick="">x!</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(7)">7</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(8)">8</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(9)">9</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="addOperator('*')">×</button>
+      </div>
+
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator('**(-1)')">⅟x</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(4)">4</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(5)">5</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(6)">6</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="addOperator('-')">-</button>
+      </div>
+
+      <div class="hidden circle">
+        <button class="dark" onclick="addOperator2('Math.PI')">π</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(1)">1</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(2)">2</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(3)">3</button>
+      </div>
+      <div class="circle">
+        <button class="orange" onclick="addOperator('+')">+</button>
+      </div>
+
+      <div class="circle">
+        <button class="orange" onclick="toggleMore()">▢</button>
+      </div>
+      <div class="hidden circle">
+        <button onclick="addOperator2('Math.E')">e</button>
+      </div>
+      <div class="circle">
+        <button onclick="addNumber(0)">0</button>
+      </div>
+      <div class="circle">
+        <button onclick="addDot()">.</button>
+      </div>
+      <div class="orange-circle">
+        <button onclick="equal()">=</button>
+      </div>
+    </div>
+  </body>
+</html>
